@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 var corsOptions = {
     // origin: "http://localhost:"+ (process.env.CLIENT || 3000),
-    origin: process.env.CLIENT || "http://localhost:3000",
+    origin: [process.env.CLIENT || "http://localhost:3000"],
     credentials: true
 };
 app.use(cors(corsOptions));

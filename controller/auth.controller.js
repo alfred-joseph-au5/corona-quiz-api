@@ -3,7 +3,8 @@ function createSession(req, res) {
         res.status(200).json('Success!');
         return
     }
-    // console.log(req.body);
+    console.log(req.session.usn);
+    console.log(req.body);
     
     if(req.body.usn.length && req.body.email.length ){
         req.session.usn = {
